@@ -1,0 +1,16 @@
+{
+    "name": "playwright-signup-test",
+    "version": "1.0.0",
+    "description": "Playwright тест перевірки кнопки Sign up",
+    "main": "index.js",
+    "scripts": {
+        "test": "npx playwright test",
+        "test:headed": "npx playwright test --headed",
+        "test:debug": "npx playwright test --debug"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@playwright/test": "^1.51.1"
+    }
+}

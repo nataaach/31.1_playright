@@ -1,0 +1,23 @@
+name: Playwright Docker Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  playwright-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Run Playwright tests in Docker
+        run: |
+          docker run \
+            --ipc=host \
+            -v ${{ github.workspace }}:/tests \
+            -w /tests \
+            mcr.microsoft.com/playwright:v1.39.0-jammy \
+            npx playwright test
