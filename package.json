@@ -12,5 +12,13 @@
     "license": "ISC",
     "devDependencies": {
         "@playwright/test": "^1.51.1"
-    }
+    },
+    "directories": {
+        "test": "tests"
+    },
+    "dependencies": {
+        "playwright": "^1.51.1",
+        "playwright-core": "^1.51.1"
+    },
+    "keywords": []
 }
